@@ -94,6 +94,13 @@ export const useExtensionStore = defineStore('extension', () => {
       return { success: false, error: '고정 확장자 추가 실패' }
     } catch (error) {
       console.error('고정 확장자 추가 실패:', error)
+
+      // 409 Conflict 에러인 경우 백엔드에서 제공하는 친화적인 메시지 사용
+      if (error.response && error.response.status === 409) {
+        const message = error.response.data?.message || '중복된 확장자입니다.'
+        return { success: false, error: message }
+      }
+
       return { success: false, error: error.message }
     }
   }
@@ -191,6 +198,13 @@ export const useExtensionStore = defineStore('extension', () => {
       return { success: false, error: '커스텀 확장자 추가 실패' }
     } catch (error) {
       console.error('커스텀 확장자 추가 실패:', error)
+
+      // 409 Conflict 에러인 경우 백엔드에서 제공하는 친화적인 메시지 사용
+      if (error.response && error.response.status === 409) {
+        const message = error.response.data?.message || '중복된 확장자입니다.'
+        return { success: false, error: message }
+      }
+
       return { success: false, error: error.message }
     }
   }
