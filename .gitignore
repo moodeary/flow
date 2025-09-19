@@ -1,0 +1,23 @@
+# 각 프로젝트별 빌드 파일들
+flow_frontend/dist/
+flow_frontend/node_modules/
+flow_frontend/.env.local
+flow_frontend/.env.*.local
+
+flow_backend/build/
+flow_backend/.gradle/
+flow_backend/out/
+flow_backend/logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.env
