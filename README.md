@@ -8,7 +8,8 @@ Spring Boot + Vue.js 웹 애플리케이션
 flow/
 ├── flow_frontend/    # Vue.js 프론트엔드
 ├── flow_backend/     # Spring Boot 백엔드
-├── flow_infra/       # Docker & Nginx 설정
+├── flow_nginx/       # Nginx 설정
+├── docker-compose.yml
 └── README.md
 ```
 
@@ -20,7 +21,6 @@ flow/
 
 ### Docker 배포
 ```bash
-cd flow_infra
 docker-compose up -d
 ```
 
@@ -28,4 +28,4 @@ docker-compose up -d
 - **Frontend**: Vue.js (Port: 5173)
 - **Backend**: Spring Boot (Port: 8080)
 - **Database**: MariaDB (Port: 3306)
-- **Reverse Proxy**: Nginx (Port: 80, 443)
+- **Reverse Proxy**: Nginx (Port: 80, 443)# flow
