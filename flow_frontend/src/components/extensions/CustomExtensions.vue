@@ -80,7 +80,7 @@ const fetchCustomExtensions = async () => {
 
 /**
  * 커스텀 확장자 입력값의 유효성을 검증하는 함수
- * - 빈 값, 길이 제한, 중복 확인 등의 검증 수행
+ * - 빈 값, 길이 제한, 한글 포함, 올바른 형식, 중복 확인 등의 검증 수행
  * - 에러 메시지 반환 또는 빈 문자열(유효함) 반환
  */
 const validateCustomExtension = (extension) => {
@@ -90,6 +90,23 @@ const validateCustomExtension = (extension) => {
 
   if (extension.length > 20) {
     return '확장자는 최대 20자까지 입력 가능합니다.'
+  }
+
+  // 한글이 포함되어 있는지 확인 (전체 입력값에 대해)
+  const koreanRegex = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/
+  if (koreanRegex.test(extension)) {
+    return '확장자에는 한글을 사용할 수 없습니다. 영문자와 숫자만 입력해주세요.'
+  }
+
+  // . 이 포함된 경우 잘못된 형식으로 판단
+  if (extension.includes('.')) {
+    return '올바른 확장자 형식을 입력해주세요. 점(.)을 제외하고 입력해주세요. (예: sh, php)'
+  }
+
+  // 영문자, 숫자만 허용하는 정규식
+  const validExtensionRegex = /^[a-zA-Z0-9]+$/
+  if (!validExtensionRegex.test(extension)) {
+    return '확장자는 영문자와 숫자만 사용할 수 있습니다.'
   }
 
   // 커스텀 확장자 중복 확인
