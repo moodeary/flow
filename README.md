@@ -418,8 +418,5 @@ docker-compose down -v
    test: 테스트 추가/수정
    chore: 빌드 설정 등
    ```
----
-
-📅 Last Updated: January 2025
 
 </div>
