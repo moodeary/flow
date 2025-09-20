@@ -403,53 +403,10 @@ docker-compose down -v
 --color-error: #dc2626, #fee2e2
 ```
 
-### 📝 타이포그래피
-- **Font Family**: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`
-- **제목**: 18px-24px, 700 weight
-- **본문**: 12px-14px, 400-600 weight
-- **보조**: 9px-10px, 400 weight
-
-### 📏 간격 시스템
-- **컨테이너**: 12-24px 패딩
-- **컴포넌트**: 8-16px 마진
-- **내부 요소**: 4-8px 갭
-
----
-
-## 🔮 향후 로드맵
-
-### 🎯 Phase 1: 기능 확장
-- [ ] 🌍 다국어 지원 (i18n)
-- [ ] 🌙 다크모드 테마
-- [ ] 📁 확장자 그룹 관리
-- [ ] 🔍 파일 미리보기
-- [ ] 🎯 드래그 앤 드롭 정렬
-
-### ⚡ Phase 2: 성능 최적화
-- [ ] 📜 가상 스크롤링
-- [ ] 🖼️ 이미지 지연 로딩
-- [ ] 📦 청크 단위 업로드
-- [ ] 💾 캐시 전략 개선
-- [ ] 🔄 Redis 연동
-
-### 🚀 Phase 3: 고도화
-- [ ] ⌨️ 키보드 단축키
-- [ ] 🍞 브레드크럼 네비게이션
-- [ ] 🔔 실시간 알림 (WebSocket)
-- [ ] 📱 오프라인 지원 (PWA)
-- [ ] 🔐 사용자 인증 시스템
-
----
-
-## 🤝 기여하기
-
 ### 📋 개발 가이드라인
 
 1. **브랜치 전략**
    - `main`: 프로덕션 배포
-   - `develop`: 개발 통합
-   - `feature/*`: 기능 개발
-   - `hotfix/*`: 긴급 수정
 
 2. **커밋 컨벤션**
    ```
@@ -461,38 +418,7 @@ docker-compose down -v
    test: 테스트 추가/수정
    chore: 빌드 설정 등
    ```
-
-3. **코드 품질**
-   - ESLint + Prettier (Frontend)
-   - Checkstyle (Backend)
-   - 테스트 커버리지 80% 이상 유지
-
 ---
-
-## 📞 문의 & 지원
-
-### 🐛 이슈 리포팅
-- **버그 발견시**: [GitHub Issues](../../issues)
-- **기능 제안**: [GitHub Discussions](../../discussions)
-
-### 📚 문서
-- **API 문서**: `http://localhost:8080/swagger-ui.html` (개발환경)
-- **프론트엔드 가이드**: [FRONTEND_FEATURES.md](./FRONTEND_FEATURES.md)
-- **프로젝트 구조**: [STRUCTURE.md](./STRUCTURE.md)
-
----
-
-## 📄 라이선스
-
-이 프로젝트는 [MIT License](./LICENSE) 하에 배포됩니다.
-
----
-
-<div align="center">
-
-### 🎉 Flow Project로 안전하고 효율적인 파일 관리를 경험해보세요!
-
-**Made with ❤️ by Flow Team**
 
 📅 Last Updated: January 2025
 
